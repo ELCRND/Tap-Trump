@@ -1,9 +1,6 @@
-const menuBtn = document.querySelector(".menu-btn");
+const menuBtn = document.querySelector(".header__menu-btn");
 const menu = document.querySelector(".header__menu");
-const toggleBtns = document.querySelectorAll(".person__btn");
-const personsInfo = document.querySelectorAll(".person");
-const key = document.querySelector("#key");
-const tooltip = document.querySelector(".tokenomics__tooltip");
+const faqBtns = document.querySelectorAll(".question__btn");
 
 // открыть/закрыть меню
 menuBtn.addEventListener("click", () => {
@@ -21,24 +18,9 @@ document.querySelectorAll(".menu__link").forEach((link) =>
   })
 );
 
-// переключение контента в блоке about
-toggleBtns.forEach((btn) =>
+faqBtns.forEach((btn) =>
   btn.addEventListener("click", (e) => {
-    const contentType = e.target.parentNode.getAttribute("data-type");
-    toggleBtns.forEach((b) => b.classList.remove("active-btn"));
-    e.target.parentNode.classList.add("active-btn");
-
-    personsInfo.forEach((el, idx) => {
-      idx == contentType
-        ? el.classList.remove("hidden")
-        : el.classList.add("hidden");
-    });
+    e.target.parentNode.classList.toggle("open");
+    e.target.classList.toggle("open");
   })
 );
-
-// копирование кода в буфер обмена
-document.querySelector("#key-copy").addEventListener("click", () => {
-  navigator.clipboard.writeText(key.getAttribute("data-key"));
-  tooltip.classList.add("visible");
-  setTimeout(() => tooltip.classList.remove("visible"), 400);
-});

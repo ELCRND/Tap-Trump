@@ -1,12 +1,18 @@
 .about {
   padding-top: 338px;
   padding-bottom: 120px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 183px;
+    padding-bottom: 20px;
+  }
 }
 
 .about__container {
   width: min(1286px, 100%);
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .about__title {
@@ -14,9 +20,19 @@
   font-size: 64px;
   line-height: 105%;
   text-transform: uppercase;
-  color: #192963;
+  color: var(--blue);
   text-align: center;
   translate: -78px 0;
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 480px;
+    z-index: 2;
+    left: 30px;
+    translate: 0;
+    font-size: 36px;
+    color: #fff;
+  }
 }
 
 .about__wrap {
@@ -26,6 +42,15 @@
   display: flex;
   gap: 49px;
   position: relative;
+
+  @media screen and (max-width: 768px) {
+    min-height: 880px;
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+  @media screen and (max-width: 360px) {
+    min-height: 920px;
+  }
 
   &:after {
     content: "";
@@ -40,11 +65,30 @@
 
 .about__img {
   min-width: 384px;
+  @media screen and (max-width: 1280px) {
+    min-width: 220px;
+  }
+  @media screen and (max-width: 768px) {
+    min-width: auto;
+    min-height: 446px;
+  }
 
   img {
     position: absolute;
     top: -227px;
     z-index: 2;
+
+    @media screen and (max-width: 1280px) {
+      top: -86px;
+      left: -20px;
+      scale: 0.7;
+    }
+    @media screen and (max-width: 768px) {
+      scale: 1;
+      top: -133px;
+      left: 50%;
+      translate: -50% 0;
+    }
   }
 }
 
@@ -58,6 +102,16 @@
   font-size: 32px;
   line-height: 120%;
   text-transform: uppercase;
+
+  @media screen and (max-width: 1280px) {
+    font-style: 24px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 .about__signature {
@@ -67,6 +121,10 @@
   font-size: 18px;
   line-height: 120%;
   text-transform: uppercase;
+  @media screen and (max-width: 768px) {
+    padding-left: 0;
+    font-size: 12px;
+  }
 
   span {
     display: block;
@@ -74,6 +132,10 @@
     &:last-of-type {
       font-size: 32px;
       line-height: 120%;
+
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+      }
     }
   }
 
@@ -81,6 +143,9 @@
     position: absolute;
     left: 0px;
     top: -74px;
+    @media screen and (max-width: 768px) {
+      scale: 0.7;
+    }
   }
 }
 
@@ -91,4 +156,8 @@
   font-size: 16px;
   line-height: 120%;
   text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 }

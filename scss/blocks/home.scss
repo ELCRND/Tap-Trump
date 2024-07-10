@@ -2,8 +2,10 @@
   min-height: 1000px;
   background-image: url("../public/img/hero/hero_bg.jpg");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
+  box-shadow: 0 0 0 10px red inset;
 
   &::after {
     content: "";
@@ -39,6 +41,12 @@
   color: #192963;
   z-index: 2;
   transition: background-color 200ms ease, border-color 200ms ease;
+
+  @media screen and (max-width: 768px) {
+    width: 149px;
+    height: 56px;
+    font-size: 22px;
+  }
 
   &:hover {
     background-color: #ccc;

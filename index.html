@@ -40,18 +40,33 @@
                     </li>
                 </ol>
             </nav>
-            <div class="header__bg">
-                <svg width="1900" height="124" viewBox="0 0 1900 124" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M1900 20C1900 8.95431 1891.05 0 1880 0H20C8.95431 0 0 8.9543 0 20V64C0 75.0457 8.95429 84 20 84H755C766.046 84 775 92.9543 775 104C775 115.046 783.954 124 795 124H1105C1116.05 124 1125 115.046 1125 104C1125 92.9543 1133.95 84 1145 84H1880C1891.05 84 1900 75.0457 1900 64V20Z"
-                        fill="white" />
-                </svg>
+
+            <button class="header__menu-btn" type="button" aria-label="menu">
+                <div></div>
+                <div></div>
+            </button>
+
+            <div class="header__menu menu">
+                <ol class="menu__list">
+                    <li>
+                        <a href="#home" class="menu__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="menu__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#roadmap" class="menu__link">roadmap</a>
+                    </li>
+                    <li>
+                        <a href="#questions" class="menu__link">Questions</a>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
 
     <!-- HOME -->
-    <section class="home">
+    <section class="home" id="home">
         <a href="javascript:void(0);" class="home__btn">
             <span>play now</span>
             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +76,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="about__container">
             <h2 class="about__title">About</h2>
             <div class="about__wrap">
@@ -94,7 +109,7 @@
     </section>
 
     <!-- ROADMAP -->
-    <section class="roadmap">
+    <section class="roadmap" id="roadmap">
         <div class="roadmap__container">
             <h2 class="roadmap__title">roadmap</h2>
             <div class="roadmap__schedule schedule">
@@ -174,6 +189,94 @@
             </div>
         </div>
     </section>
+
+    <!-- QUESTIONS -->
+    <section class="questions" id="questions">
+        <div class="questions__container">
+            <h2 class="questions__title">Q&A</h2>
+
+            <div class="questions__list">
+
+                <div class="column1">
+
+                    <div class="question">
+                        <h3 class="question__title">When will the game be released?</h3>
+                        <span class="question__request">The official release is scheduled for Q1 2025. We'll keep you
+                            updated with all the latest news as we approach the launch date!</span>
+                        <button class="question__btn" type="button" aria-label="more"></button>
+                    </div>
+
+                    <div class="question">
+                        <h3 class="question__title">Can players provide feedback or suggest new features?</h3>
+                        <span class="question__request">
+                            Absolutely! We welcome player feedback and suggestions through our official channels. Your
+                            input
+                            is crucial in helping us improve the game!
+                        </span>
+                        <button class="question__btn" type="button" aria-label="more"></button>
+                    </div>
+
+                </div>
+
+                <div class="column2">
+
+                    <div class="question">
+                        <h3 class="question__title">How can I join the beta testing?</h3>
+                        <span class="question__request">
+                            Beta testing will begin in Q3 2024. Follow us on social media and subscribe to our
+                            newsletter to
+                            get the latest updates and secure your spot in the beta!
+                        </span>
+                        <button class="question__btn" type="button" aria-label="more"></button>
+                    </div>
+
+                    <div class="question">
+                        <h3 class="question__title">What kind of support will you offer post-launch?</h3>
+                        <span class="question__request">
+                            We are dedicated to providing continuous support with regular updates, bug fixes, and new
+                            content to ensure a great gaming experience.
+                        </span>
+                        <button class="question__btn" type="button" aria-label="more"></button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+
+            <div class="footer__top">
+                <img src="public/img/footer/footer_logo.png" alt="logo" class="footer__logo" width="280" height="88"
+                    loading="lazy">
+
+                <a href="javascript:void(0);" class="footer__btn">
+                    <span>play now</span>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 19.48L19 2M19 2H2M19 2V21" stroke="#192963" stroke-width="3" />
+                    </svg>
+                </a>
+
+                <ol class="footer__navigation navigation">
+                    <li><a href="#home" class="navigation__link">Home</a></li>
+                    <li><a href="#about" class="navigation__link">About</a></li>
+                    <li><a href="#roadmap" class="navigation__link">roadmap</a></li>
+                    <li><a href="#questions" class="navigation__link">Questions</a></li>
+                </ol>
+            </div>
+
+            <div class="footer__bottom">
+                © 2024 TRUMP COIN. All Rights Reserved.
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -2,28 +2,69 @@
   padding-top: 70px;
   padding-bottom: 100px;
   background-color: #f00;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 28px;
+    padding-bottom: 51px;
+  }
 }
 
 .roadmap__container {
-  width: min(1274px, 100%);
+  width: min(1294px, 100%);
   margin-left: auto;
   margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .roadmap__title {
+  margin-bottom: 79px;
   font-size: 64px;
   line-height: 105%;
   text-transform: uppercase;
   color: #fff;
+  @media screen and (max-width: 1120px) {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
+    margin-bottom: 23px;
+  }
 }
 
 .roadmap__schedule {
+  padding-top: 16px;
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+  position: relative;
+
+  @media screen and (max-width: 1120px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &:before {
+    content: url("../public/img/roadmap/roadmap_decoration.png");
+    width: calc(100% + 20px);
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: -10px;
+
+    @media screen and (max-width: 1280px) {
+      display: none;
+    }
+  }
 }
 
 .schedule__event {
+  @media screen and (max-width: 1120px) {
+    min-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .event__date {
     width: fit-content;
     padding: 3px 9px;
@@ -32,6 +73,10 @@
     font-size: 26px;
     line-height: 120%;
     color: #e60101;
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   .event__list {
@@ -47,6 +92,10 @@
       font-size: 20px;
       line-height: 120%;
       color: #000;
+
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -64,6 +113,10 @@
   gap: 100px;
   background-color: #fff;
   text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 
   .banner__img {
     display: flex;

@@ -1,0 +1,147 @@
+.questions {
+  padding-top: 80px;
+  padding-bottom: 160px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+
+.questions__container {
+  width: min(1326px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.questions__title {
+  margin-bottom: 30px;
+  font-size: 64px;
+  line-height: 105%;
+  text-transform: uppercase;
+  color: var(--blue);
+
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+.questions__list {
+  display: flex;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .column1,
+  .column2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media screen and (max-width: 1280px) {
+      width: 100%;
+    }
+  }
+}
+
+.question {
+  max-height: 90px;
+  overflow: hidden;
+  padding: 30px 75px 30px 25px;
+  background-color: #f00;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  transition: max-height 300ms ease;
+
+  @media screen and (max-width: 1280px) {
+    max-height: 69px;
+    padding: 24px 50px 23px 24px;
+  }
+
+  @media screen and (max-width: 540px) {
+    max-height: 94px;
+  }
+
+  &::after {
+    content: "";
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: 3px solid #fff;
+    z-index: -1;
+  }
+}
+
+.question.open {
+  max-height: 100%;
+  transition: max-height 200ms ease;
+}
+
+.question__title {
+  margin-bottom: 27px;
+  font-size: 24px;
+  line-height: 120%;
+
+  @media screen and (max-width: 1280px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 540px) {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+}
+
+.question__request {
+  font-size: 20px;
+  line-height: 120%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.question__btn {
+  width: 38px;
+  height: 66px;
+  background-color: #fff;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  @media screen and (max-width: 1280px) {
+    width: 26px;
+    height: 44px;
+  }
+  @media screen and (max-width: 540px) {
+    top: 24px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 12px;
+    height: 12px;
+    border-left: 3px solid #f00;
+    border-bottom: 3px solid #f00;
+    rotate: -45deg;
+    transition: rotate 200ms ease;
+  }
+}
+
+.question__btn.open {
+  &::after {
+    rotate: -225deg;
+  }
+}
