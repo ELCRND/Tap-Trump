@@ -1,0 +1,98 @@
+.roadmap {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  background-color: #f00;
+}
+
+.roadmap__container {
+  width: min(1274px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.roadmap__title {
+  font-size: 64px;
+  line-height: 105%;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.roadmap__schedule {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.schedule__event {
+  .event__date {
+    width: fit-content;
+    padding: 3px 9px;
+    display: block;
+    background-color: #fff;
+    font-size: 26px;
+    line-height: 120%;
+    color: #e60101;
+  }
+
+  .event__list {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+    .event__item {
+      width: fit-content;
+      padding: 7px 9px;
+      background-color: #fff;
+      font-size: 20px;
+      line-height: 120%;
+      color: #000;
+    }
+  }
+}
+
+.schedule__event:first-of-type {
+  .event__item:first-of-type {
+    border: 3px solid #920000;
+  }
+}
+
+.roadmap__banner {
+  margin-top: 110px;
+  padding: 10px;
+  display: flex;
+  gap: 100px;
+  background-color: #fff;
+  text-transform: uppercase;
+
+  .banner__img {
+    display: flex;
+    gap: 16px;
+  }
+
+  .banner__title {
+    margin-top: 21px;
+    display: flex;
+    gap: 11px;
+    span:first-of-type {
+      height: fit-content;
+      padding: 7px 9px;
+      background-color: #f00;
+      font-size: 20px;
+      line-height: 120%;
+    }
+    span:last-of-type {
+      font-size: 26px;
+      line-height: 120%;
+      color: #e60101;
+    }
+  }
+
+  .banner__text {
+    display: block;
+    margin-top: 38px;
+    font-size: 38px;
+    line-height: 145%;
+    color: #000;
+  }
+}
