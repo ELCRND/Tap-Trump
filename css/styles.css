@@ -306,12 +306,12 @@ body {
 }
 
 .header__menu {
-  width: calc(100% + 20px);
+  width: calc(100% + 12px);
   height: 100vh;
   padding-top: 150px;
   position: absolute;
   top: 0;
-  left: -10px;
+  left: -6px;
   z-index: 4;
   translate: 0 -120%;
   background-color: #f00;
