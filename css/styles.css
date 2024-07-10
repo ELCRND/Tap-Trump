@@ -170,11 +170,11 @@ body {
 }
 
 .header__bottom {
-  width: calc(100% - 12px);
+  width: calc(100% - 20px);
   height: 83px;
   position: absolute;
   top: 60px;
-  left: 6px;
+  left: 10px;
   z-index: 10;
   background-color: #fff;
   display: flex;
@@ -183,6 +183,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .header__bottom {
+    width: calc(100% - 12px);
+    left: 6px;
     height: 68px;
     top: 50px;
   }
